@@ -1,6 +1,8 @@
 using ApplicationLayer.DependencyInjection;
 using CleanArchitectureTemplate;
+using InfrastructureLayer.Data;
 using InfrastructureLayer.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,14 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: false )
     .AddEnvironmentVariables();
 
+// Add DbContext
+builder.Services.AddDbContext<CustomDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),splOptions =>
+    {
+        splOptions.MigrationsAssembly("InfrastructureLayer");
+    });
+});
 // Add services to the container.
 builder.Services.ReadConfigurations(builder.Configuration);
 builder.Services.ApplicationLayerServicesInjection();
