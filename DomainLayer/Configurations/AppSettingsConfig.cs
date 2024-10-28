@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Configurations
 {
-    internal class AppSettingsConfig : IAppSettingsConfig
+    public class AppSettingsConfig : IAppSettingsConfig
     {
     }
 }
