@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Pride and Prejudice",
+    "publisherId": 1,
+    "categoryId": 1,
+    "libraries": []
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "publisherId": 2,
+    "categoryId": 2,
+    "libraries": []
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Penguin Books",
+    "books": []
+  },
+  {
+    "id": 2,
+    "name": "HarperCollins",
+    "books": []
+  }
+]

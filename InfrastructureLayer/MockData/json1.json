@@ -1,3 +1,72 @@
 {
-
+  "authors": [
+    {
+      "id": 1,
+      "name": "Jane Austen",
+      "biography": {
+        "id": 1,
+        "details": "Jane Austen was an English novelist known for her six major novels.",
+        "authorId": 1
+      }
+    },
+    {
+      "id": 2,
+      "name": "George Orwell",
+      "biography": {
+        "id": 2,
+        "details": "George Orwell was an English novelist and essayist, journalist, and critic.",
+        "authorId": 2
+      }
+    }
+  ],
+  "publishers": [
+    {
+      "id": 1,
+      "name": "Penguin Books",
+      "books": []
+    },
+    {
+      "id": 2,
+      "name": "HarperCollins",
+      "books": []
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fiction"
+    },
+    {
+      "id": 2,
+      "name": "Dystopian"
+    }
+  ],
+  "libraries": [
+    {
+      "id": 1,
+      "location": "Downtown Library",
+      "books": []
+    },
+    {
+      "id": 2,
+      "location": "City Central Library",
+      "books": []
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Pride and Prejudice",
+      "publisherId": 1,
+      "categoryId": 1,
+      "libraries": []
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "publisherId": 2,
+      "categoryId": 2,
+      "libraries": []
+    }
+  ]
 }

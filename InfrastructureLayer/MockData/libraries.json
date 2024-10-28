@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "location": "Downtown Library",
+    "books": []
+  },
+  {
+    "id": 2,
+    "location": "City Central Library",
+    "books": []
+  }
+]

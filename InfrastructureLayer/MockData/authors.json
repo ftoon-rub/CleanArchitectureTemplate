@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Austen",
+    "biography": {
+      "id": 1,
+      "details": "Jane Austen was an English novelist known for her six major novels.",
+      "authorId": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "George Orwell",
+    "biography": {
+      "id": 2,
+      "details": "George Orwell was an English novelist and essayist, journalist, and critic.",
+      "authorId": 2
+    }
+  }
+]
