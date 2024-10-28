@@ -2,6 +2,7 @@
 using DomainLayer.Entites.BaseEntites;
 using DomainLayer.Enum;
 using DomainLayer.Lookup;
+using DomainLayer.Lookup.BaseLookups;
 using Microsoft.EntityFrameworkCore;
 
 namespace InfrastructureLayer.Data
@@ -19,6 +20,15 @@ namespace InfrastructureLayer.Data
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 if (typeof(BaseEntity).IsAssignableFrom(entityType.ClrType))
+                {
+                    modelBuilder.Entity(entityType.ClrType)
+                        .Property("Id")
+                        .ValueGeneratedOnAdd();
+                }
+            }
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (typeof(BaseLookup).IsAssignableFrom(entityType.ClrType))
                 {
                     modelBuilder.Entity(entityType.ClrType)
                         .Property("Id")
