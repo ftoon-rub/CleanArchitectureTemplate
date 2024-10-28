@@ -4,6 +4,11 @@ using InfrastructureLayer.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false , reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: false )
+    .AddEnvironmentVariables();
+
 // Add services to the container.
 builder.Services.ReadConfigurations(builder.Configuration);
 builder.Services.ApplicationLayerServicesInjection();
