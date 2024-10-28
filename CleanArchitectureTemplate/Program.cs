@@ -43,6 +43,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGet("/",async context =>
+{
+    await context.Response.WriteAsync("api is up and running...");
+});
 
 try
 {
