@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationLayer.Services
 {
-   internal class Class1 : Interface1
+    public class NotificationService : INotificationService
     {
     }
 }

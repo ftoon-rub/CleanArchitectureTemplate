@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfrastructureLayer.Extensions
+namespace ApplicationLayer.Validations.ExtensionValidation
 {
-    internal class Hangfire
+    internal class Class1
     {
     }
 }

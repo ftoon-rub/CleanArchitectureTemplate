@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationLayer.Interfaces.ApplicationLayer
+namespace ApplicationLayer.Mapping.ManualMapping
 {
-    internal interface Interface1
+    internal class Class1
     {
     }
 }

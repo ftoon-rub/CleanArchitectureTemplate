@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationLayer.Interfaces.InfrastructureLayer
+namespace ApplicationLayer.Validations.FluentValidation
 {
-    internal interface Interface1
+    internal class Class1
     {
     }
 }
