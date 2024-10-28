@@ -44,4 +44,20 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try
+{
+    using (IServiceScope scop = app.Services.CreateScope())
+    {
+        if (builder.Configuration.GetValue<bool>("EnableDatabaseMigration"))
+        {
+            CustomDbContext dbContext = scop.ServiceProvider.GetRequiredService<CustomDbContext>();
+            await dbContext.Database.MigrateAsync();
+        }
+    }
+    app.Run();
+}
+catch (Exception)
+{
+
+    throw;
+}
