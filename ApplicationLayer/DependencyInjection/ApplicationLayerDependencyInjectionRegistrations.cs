@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ApplicationLayer.Interfaces.ApplicationLayer;
+using ApplicationLayer.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ namespace ApplicationLayer.DependencyInjection
             #endregion
 
             #region AddScoped
+            services.AddScoped<INotificationService, NotificationService>();
             #endregion
 
             #region AddSingleton

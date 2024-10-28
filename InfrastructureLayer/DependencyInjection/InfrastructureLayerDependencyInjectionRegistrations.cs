@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ApplicationLayer.Interfaces.InfrastructureLayer;
+using InfrastructureLayer.DAL;
+using InfrastructureLayer.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +18,10 @@ namespace InfrastructureLayer.DependencyInjection
             #endregion
 
             #region AddScoped
+            services.AddScoped<IEmailService,EmailService>();
+            services.AddScoped<ISmsService,SmsService>();
+            services.AddScoped<IRedisCache,RedisCache>();
+            services.AddScoped<IStoredProcedures,StoredProcedures>();
             #endregion
 
             #region AddSingleton
