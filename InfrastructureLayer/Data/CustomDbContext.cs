@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Entites;
+using DomainLayer.Entites.BaseEntites;
 using DomainLayer.Enum;
 using DomainLayer.Lookup;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,16 @@ namespace InfrastructureLayer.Data
         public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (typeof(BaseEntity).IsAssignableFrom(entityType.ClrType))
+                {
+                    modelBuilder.Entity(entityType.ClrType)
+                        .Property("Id")
+                        .ValueGeneratedOnAdd();
+                }
+            }
+
             // One-to-One relationship between Author and Biography
             modelBuilder.Entity<Author>()
                 .HasOne(a => a.Biography)
@@ -43,6 +54,8 @@ namespace InfrastructureLayer.Data
                         Name = e.ToString()
                     })
             );
+
+            base.OnModelCreating(modelBuilder);
         }
 
     }
