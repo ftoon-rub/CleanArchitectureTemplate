@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Exceptions
+namespace ApplicationLayer.Enums
 {
-    public class BaseCustomException : Exception
+    internal class Class1
     {
     }
 }

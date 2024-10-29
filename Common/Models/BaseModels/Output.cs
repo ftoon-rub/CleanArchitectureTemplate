@@ -1,4 +1,4 @@
-﻿namespace ApplicationLayer.Models.BaseModels
+﻿namespace Common.Models.BaseModels
 {
     public class Output <T>
     {

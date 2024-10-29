@@ -1,6 +1,6 @@
-﻿using ApplicationLayer.Enums;
+﻿using Common.Enums;
 
-namespace ApplicationLayer.Models.BaseModels
+namespace Common.Models.BaseModels
 {
     public class ErrorDetails
     {
