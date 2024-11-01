@@ -9,6 +9,10 @@ namespace PersistenceLayer.Data
 {
     public class CustomDbContext : DbContext
     {
+        public CustomDbContext(DbContextOptions<CustomDbContext> options) : base(options)
+        {
+            
+        }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Biography> Biographies { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
@@ -60,6 +64,7 @@ namespace PersistenceLayer.Data
                     .Cast<ECategory>()
                     .Select(e => new Category
                     {
+                        Id = (int)e,
                         Code = (int)e,
                         Name = e.ToString()
                     })

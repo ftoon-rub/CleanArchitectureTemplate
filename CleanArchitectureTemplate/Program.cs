@@ -14,9 +14,9 @@ builder.Configuration
 // Add DbContext
 builder.Services.AddDbContext<CustomDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),splOptions =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), splOptions =>
     {
-        splOptions.MigrationsAssembly("InfrastructureLayer");
+        splOptions.MigrationsAssembly("PersistenceLayer");
     });
 });
 // Add services to the container.

@@ -1,0 +1,2 @@
+PM> Add-Migration initDb -Project PersistenceLayer
+PM> Update-Database
