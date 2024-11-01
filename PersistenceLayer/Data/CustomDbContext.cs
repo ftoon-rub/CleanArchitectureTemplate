@@ -5,7 +5,7 @@ using DomainLayer.Lookup;
 using DomainLayer.Lookup.BaseLookups;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfrastructureLayer.Data
+namespace PersistenceLayer.Data
 {
     public class CustomDbContext : DbContext
     {

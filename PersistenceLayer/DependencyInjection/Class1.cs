@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfrastructureLayer.DAL
+namespace PersistenceLayer.DependencyInjection
 {
-    internal class Repository
+    internal class Class1
     {
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfrastructureLayer.DAL
+namespace ApplicationLayer.Models
 {
-    internal class UnitOfWork
+    internal class Class1
     {
     }
 }
