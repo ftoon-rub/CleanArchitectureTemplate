@@ -8,5 +8,7 @@ namespace DomainLayer.Configurations
 {
     public interface IAppSettingsConfig
     {
+        public CustomAuthenticate CustomAuthenticate { get; set; }
+
     }
 }

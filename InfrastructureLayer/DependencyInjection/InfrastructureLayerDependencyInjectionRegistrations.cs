@@ -1,6 +1,7 @@
 ﻿using ApplicationLayer.Interfaces.InfrastructureLayer;
 using ApplicationLayer.Interfaces.PersistenceLayer;
 using InfrastructureLayer.DAL;
+using InfrastructureLayer.Security.Authentication;
 using InfrastructureLayer.Services;
 using Microsoft.Extensions.DependencyInjection;
 using PersistenceLayer.DAL;
@@ -20,6 +21,7 @@ namespace InfrastructureLayer.DependencyInjection
             #endregion
 
             #region AddScoped
+            services.AddScoped<IJwtTokenGeneration, JwtTokenGeneration>();
             services.AddScoped<IEmailService,EmailService>();
             services.AddScoped<ISmsService,SmsService>();
             services.AddScoped<IRedisCache,RedisCache>();
