@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationLayer.Interfaces.InfrastructureLayer
+namespace ApplicationLayer.Interfaces.PersistenceLayer
 {
-    public interface IStoredProcedures
+    public interface IUnitOfWork
     {
     }
 }

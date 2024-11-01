@@ -1,7 +1,9 @@
 ﻿using ApplicationLayer.Interfaces.InfrastructureLayer;
+using ApplicationLayer.Interfaces.PersistenceLayer;
 using InfrastructureLayer.DAL;
 using InfrastructureLayer.Services;
 using Microsoft.Extensions.DependencyInjection;
+using PersistenceLayer.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

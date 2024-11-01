@@ -1,6 +1,6 @@
 using ApplicationLayer.DependencyInjection;
 using CleanArchitectureTemplate;
-using InfrastructureLayer.Data;
+using PersistenceLayer.Data;
 using InfrastructureLayer.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
